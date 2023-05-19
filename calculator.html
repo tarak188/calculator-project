@@ -1,0 +1,172 @@
+<DOCTYPE html>
+<html>
+<head>
+    
+    <title>
+    Belhiba calculator test
+    </title>
+ 
+    <style>
+        @keyframes bck {
+            0%{background-color: aliceblue;}
+            20%{background-color: cyan;}
+
+            40%{background-color: blue;}
+
+            60%{background-color: blueviolet;}
+
+            80%{background-color: orange;}
+            80%{background-color: red;}
+
+
+        }
+        body {
+            animation: bck 20s infinite;
+        }
+         .button{
+            background-color: bisque;
+            color: black;
+            width: 100px;
+            height: 50px;   
+        }
+
+        .cbtn {
+            color: white;
+            width: 100px;
+            background-color: red;
+            height: 50px;
+            cursor: pointer;
+        }
+        .calcul {
+            position: absolute;
+            right: 40%;
+            border-style: solid;
+        }
+        .res {
+            position: absolute;
+            left: 106px;
+            top: 2px;
+            height: 50px;
+            width: 307px;
+
+        }
+        .button:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            
+        }
+        
+
+    </style>
+       
+
+
+
+</head>
+
+<body>
+   
+    
+    
+    
+ 
+    <div class="calcul">
+        
+        <td colspan="3"><input type="text" id ="result" readonly class="res" placeholder="0"></td>
+
+
+<table border="0">
+<tr>
+
+<td><input type="button" value="c" onclick="clr()" class="cbtn"></td>
+
+
+</tr>
+<tr>
+    <td><input type="button" value="1" onclick="display('1')" class="button"></td>
+    <td><input type="button" value="2" onclick="display('2')" class="button"></td>
+    <td><input type="button" value="3" onclick="display('3')" class="button"></td>
+    <td><input type="button" value="+" onclick="display('+')" class="button"></td>
+</tr>
+<tr>
+    <td><input type="button" value="4" onclick="display('4')" class="button"></td>
+    <td><input type="button" value="5" onclick="display('5')" class="button"></td>
+    <td><input type="button" value="6" onclick="display('6')" class="button"></td>
+    <td><input type="button" value="-" onclick="display('-')" class="button"></td>
+</tr>
+<tr>
+    <td><input type="button" value="7" onclick="display('7')" class="button"></td>
+    <td><input type="button" value="8" onclick="display('8')" class="button"></td>
+    <td><input type="button" value="9" onclick="display('9')" class="button"></td>
+    <td><input type="button" value="*" onclick="display('*')" class="button"></td>
+</tr>
+<tr>
+    <td><input type="button" value="," onclick="display('.')" class="button"></td>
+    <td><input type="button" value="0" onclick="display('0')" class="button"></td>
+   
+    <td><input type="button" value="=" onclick="egal()" class="button"></td>
+
+    <td><input type="button" value="/" onclick="display('/')" class="button"></td>
+
+</tr>
+</table>
+</div>
+<p>pick your favourite button color :</p>
+<button onclick="kk()" style="background-color: lightgreen; color: white; font-size: 20px;">green</button>
+<button onclick="kk1()" style="background-color: cyan; color: white; font-size: 20px;">blue</button>
+<button onclick="kk2()" style="background-color: yellow; color: white; font-size: 20px;">yellow</button>
+<button onclick="kk3()" style="background-color: white; color: black; font-size: 20px;">white</button>
+
+
+
+
+
+
+</body>
+<script >
+    function display(val) {
+    document.getElementById("result").value+=val;
+    }
+    function egal() {
+     x=document.getElementById("result").value;
+     y=eval(x);
+     document.getElementById("result").value=y;   
+    }
+  function clr ()
+  {
+    document.getElementById("result").value="";
+  }
+  function kk() {
+  var buttons = document.getElementsByClassName("button");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].style.backgroundColor = "lightgreen";
+  }
+}
+function kk1() {
+    var buttons= document.getElementsByClassName("button");
+    for (var i=0;i<buttons.length;i++) {
+        buttons[i].style.backgroundColor="cyan";
+    }
+}
+function kk2() {
+    var buttons= document.getElementsByClassName("button");
+    for (var i=0;i<buttons.length;i++) {
+        buttons[i].style.backgroundColor="yellow";
+    }
+}
+function kk3() {
+    var buttons= document.getElementsByClassName("button");
+    for (var i=0;i<buttons.length;i++) {
+        buttons[i].style.backgroundColor="white";
+        buttons[i].style.color="black";
+    }
+}
+ 
+
+    
+    </script>
+
+
+
+ </html>
