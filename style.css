@@ -1,0 +1,54 @@
+ 
+        @keyframes bck {
+            0%{background-color: aliceblue;}
+            20%{background-color: cyan;}
+
+            40%{background-color: blue;}
+
+            60%{background-color: blueviolet;}
+
+            80%{background-color: orange;}
+            80%{background-color: red;}
+
+
+        }
+        body {
+            animation: bck 20s infinite;
+        }
+         .button{
+            background-color: bisque;
+            color: black;
+            width: 100px;
+            height: 50px;   
+        }
+
+        .cbtn {
+            color: white;
+            width: 100px;
+            background-color: red;
+            height: 50px;
+            cursor: pointer;
+        }
+        .calcul {
+            position: absolute;
+            right: 40%;
+            border-style: solid;
+        }
+        .res {
+            position: absolute;
+            left: 106px;
+            top: 2px;
+            height: 50px;
+            width: 307px;
+
+        }
+        .button:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            
+        }
+        
+
+    
+       
